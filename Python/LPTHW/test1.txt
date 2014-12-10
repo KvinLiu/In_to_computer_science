@@ -1,0 +1,3 @@
+Yeah, There have to be opened with "w"
+Otherwise, The truncate() method will useless
+So,got it?
