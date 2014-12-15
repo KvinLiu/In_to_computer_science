@@ -10,7 +10,7 @@ print "Copying from %s to %s" % (from_file, to_file)
 print "Ready, hit RETURN to continue, CTRL-C to abort."
 raw_input()
 
-open(to_file, 'w').write(open(from_file).read())
+open(to_file, 'w').write(open(from_file).read()) #Just make the lines into one.
 
 print "Alright, all done."
 
