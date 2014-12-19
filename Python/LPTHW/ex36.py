@@ -1,0 +1,1 @@
+print "This excerise have not so much task, just make a simple adventure game."
