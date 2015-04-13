@@ -12,7 +12,7 @@ print "Opening the file..."
 target = open(filename, 'w')
 
 print "Truncating the file. Goodbye!"
-
+#target.truncate() #Commit out the line, make truncate() function don't work
 
 print "Now I'm going to ask you for three lines."
 
