@@ -1,9 +1,9 @@
-from sys import argv
+from sys import argv # Import a libary from sys
 
-script, filename = argv
+script, filename = argv # Assign two parameter
 
-print "We're going to erase %r." % filename
-print "If you don't want that, hit CTRL-C(^C)."
+print "We're going to erase %r." % filename # Screen out what computer gonna do
+print "If you don't want that, hit CTRL-C(^C)." # ^C is for terminal bash Or zsh to stop processing
 print "If you do want that, hit RETURN."
 
 raw_input("?")
