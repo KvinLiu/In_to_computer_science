@@ -9,7 +9,8 @@ print "If you do want that, hit RETURN."
 raw_input("?")
 
 print "Opening the file..."
-target = open(filename, 'w')
+#target = open(filename, 'w')
+target = open(filename, 'a')
 
 print "Truncating the file. Goodbye!"
 #target.truncate() #Commit out the line, make truncate() function don't work
