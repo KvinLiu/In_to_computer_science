@@ -21,9 +21,10 @@ PHRASES = {
 }
 
 # do they want to drill phrases first
-PHRASE_FIRST = False
 if len(sys.argv) == 2 and sys.argv[1] == "english":
     PHRASE_FIRST = True
+else:
+    PHRASE_FIRST = False
 
 # load up the words from the website
 for word in urlopen(WORD_URL).readlines():
@@ -69,10 +70,11 @@ try:
             question, answer = convert(snippet, phrase)
             if PHRASE_FIRST:
                 question, answer = answer, question
-                print question
 
-                raw_input("> ")
-                print "ANSWER:\n %s\n" % answer
+            print question
+
+            raw_input("> ")
+            print "ANSWER:\n %s\n" % answer
 
 except EOFError:
     print "\nBye"
