@@ -33,10 +33,14 @@ class Employee(Person):
 
 ## is-a
 class Fish(object):
+    def bark(self):
+        print "Hello, World"
     pass
 
 ## is-a
 class Salmon(Fish):
+    def Bark(self):
+        print "Hello, World again!"
     pass
 
 ## is-a
