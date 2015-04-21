@@ -14,7 +14,7 @@ dad.implicit()
 son.implicit()
 """
 # Override Explicity
-
+"""
 class Parent(object):
     def override(self):
         print "PARENT override()"
@@ -28,3 +28,21 @@ son = Child()
 
 dad.override()
 son.override()
+"""
+# Alter Before or After
+
+class Parent(object):
+    def altered(self):
+        print "PARNET altered()"
+
+class Child(Parent):
+    def altered(self):
+        print "CHILD, BEFORE PARENT altered()"
+        super(Child, self).altered()
+        print "CHILD, AFTER PARENT altered()"
+
+dad = Parent()
+son = Child()
+
+#dad.altered()
+son.altered()
