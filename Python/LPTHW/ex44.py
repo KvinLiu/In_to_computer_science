@@ -36,6 +36,9 @@ class Parent(object):
         print "PARNET altered()"
 
 class Child(Parent):
+   # def __init__(self):
+       # super(Child,self).__init__()
+
     def altered(self):
         print "CHILD, BEFORE PARENT altered()"
         super(Child, self).altered()
