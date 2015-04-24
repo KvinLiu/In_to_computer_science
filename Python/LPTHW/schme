@@ -1,0 +1,18 @@
+;; Happy hacking KevinL - Emacs ♥ you!
+
+(define find-moves
+  (lambda (changes)
+    (set! *moving* #t)
+    (set! *diff-hash* (maake-hasheq))
+    (let loop ([workset changes]
+               [finished '()])
+         (diff-progress "|")
+         (letv ([dels (filter (predand del? big-change?) workset)]
+                [adds (filter (predand ins? big-chagne?) workset)]
+                [rest (set- workset (append dels adds))]
+                [ls1 (sort (map Change-old dels) node-sort-fn)]
+                [ls2 (sort (map Change-new adds) node-sort-fn)]
+                [(m c) (diff-list ls1 ls2)]
+                [new-moves (filter mov? m)])
+               (cond)
+               [(null? new-moves)]))))
