@@ -6,7 +6,7 @@ This is just our basic imports for the game, nothing fancy really.
 
 class Scene(object):
 
-    def enter(self):
+   def enter(self):
         print "This scene is not yet configured. Subclass it and implement enter()."
         exit(1)
 """
